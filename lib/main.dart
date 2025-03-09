@@ -16,6 +16,11 @@ void main() {
 
     String? choice = stdin.readLineSync();
 
+    if (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5') {
+      print("Помилка: Невірний вибір, спробуйте ще раз.");
+      continue;
+    }
+
     if (choice == '5') {
       print("Вихід...");
       return;
@@ -44,8 +49,6 @@ void main() {
       case '5':
         print("Вихід...");
         return;
-      default:
-        print("Невірний вибір, спробуйте ще раз.");
     }
   }
 }
